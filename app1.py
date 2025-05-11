@@ -94,7 +94,7 @@ def solve_cutting_stock():
     model += pulp.lpSum(pattern_2_8m[j-1] * y[j] for j in range(1, 7)) >= demand_2_8, "製品2.8mの需要"
     
     # 解く
-    model.solve(pulp.PULP_CBC_CMD(msg=False))
+    model.solve()
     
     # 結果を抽出
     if pulp.LpStatus[model.status] == 'Optimal':
