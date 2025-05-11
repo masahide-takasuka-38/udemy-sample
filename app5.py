@@ -189,7 +189,7 @@ try:
                     prob += u[i] - u[j] + n * x[(i, j)] <= n - 1
         
         # 問題を解く
-        status = prob.solve(pulp.PULP_CBC_CMD(msg=False))
+        status = prob.solve())
         
         if status == pulp.LpStatusOptimal:
             # 結果の抽出
