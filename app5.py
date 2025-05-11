@@ -148,7 +148,7 @@ try:
             node_size=700, font_weight='bold')
     edge_labels = nx.get_edge_attributes(G_input, 'weight')
     nx.draw_networkx_edge_labels(G_input, pos=pos_dict, edge_labels=edge_labels)
-    ax_input.set_title("距離行列に基づく完全グラフ")
+    ax_input.set_title("Complete graphs based on distance matrices")
     plt.axis('off')
     plt.tight_layout()
     
