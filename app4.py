@@ -100,7 +100,7 @@ def solve_inventory_problem(h, p, K, initial_inventory, M, demands):
         prob += x[t] <= M * y[t]
     
     # 問題を解く
-    prob.solve())
+    prob.solve()
     
     # 結果を抽出
     status = pulp.LpStatus[prob.status]
