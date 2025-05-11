@@ -91,7 +91,7 @@ def solve_job_scheduling():
         prob += C[j] >= p[j]
     
     # 問題を解く
-    prob.solve(pulp.PULP_CBC_CMD(msg=False))
+    prob.solve())
     
     # 結果を抽出
     if pulp.LpStatus[prob.status] == 'Optimal':
