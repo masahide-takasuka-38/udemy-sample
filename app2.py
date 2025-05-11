@@ -115,7 +115,7 @@ def solve_production_planning():
     prob += t_Z_A * x_A + t_Z_B * x_B + t_Z_C * x_C <= t_Z, "機械Z制約"
     
     # 問題を解く
-    prob.solve(pulp.PULP_CBC_CMD(msg=False))
+    prob.solve()
     
     # 結果を返す
     if pulp.LpStatus[prob.status] == 'Optimal':
